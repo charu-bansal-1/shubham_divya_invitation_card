@@ -50,6 +50,15 @@ if (musicToggle) {
   });
 }
 
+// Scroll-down button on the first page
+const scrollDown = document.getElementById("scrollDown");
+if (scrollDown) {
+  scrollDown.addEventListener("click", () => {
+    const target = document.querySelector(".couple-section");
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 /* ================= Wedding details ================= */
 // Change this to the real wedding date & time
 const WEDDING = new Date("2026-11-11T20:00:00");
