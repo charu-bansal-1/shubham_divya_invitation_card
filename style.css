@@ -499,6 +499,44 @@ body {
   50% { transform: translateY(6px); opacity: 1; }
 }
 
+/* Scroll-down button on the first page */
+.scroll-down {
+  margin-top: 52px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: bob 2s ease-in-out infinite;
+}
+.scroll-down .sd-text {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.68rem;
+  color: #a97f45;
+}
+.scroll-down .sd-chevron {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(196, 156, 86, 0.6);
+  border-radius: 50%;
+  position: relative;
+}
+.scroll-down .sd-chevron::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid #b8873a;
+  border-bottom: 1.5px solid #b8873a;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 /* Couple card — light theme */
 .couple-section {
   position: relative;
